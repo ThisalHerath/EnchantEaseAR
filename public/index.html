@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 5vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .loading-text {
+            font-size: 4vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            animation: fade 2s infinite;
+            text-align: center;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 8vw;
+            }
+
+            .loading-text {
+                font-size: 6vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">AR Furniture Preview</div>
+    <div class="loading-text">Loading...</div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "complete/AR/index.html";
+        }, 3000);
+    </script>
+</body>
+</html>
